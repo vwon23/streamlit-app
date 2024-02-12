@@ -15,7 +15,8 @@ RUN pip3 install -r requirements.txt
 
 # Copy app_run code into image
 RUN mkdir -p /app/app_run
-COPY ./app_run /app/app_run/
+COPY app_run /app/app_run/
+COPY .streamlit /app/.streamlit/
 
 EXPOSE 8501
 
