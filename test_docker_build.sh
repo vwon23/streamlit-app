@@ -8,6 +8,9 @@ docker stop $Docker_container_name
 docker rm $Docker_container_name
 
 docker build -t $Docker_image_name:$image_tag .
-# docker run -id  --env-file ../.env --name $Docker_container_name $Docker_image_name:$image_tag
+
 docker run -p 8501:8501 --env-file ../.env --name $Docker_container_name $Docker_image_name:$image_tag
+
+# # Script to locally troubleshoot
+# docker run -dp 8501:8501 --env-file ../.env --name $Docker_container_name $Docker_image_name:$image_tag
 # docker exec -it $Docker_container_name bash
