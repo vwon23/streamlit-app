@@ -1,5 +1,6 @@
 [server]
 runOnSave = true
+port = 80
 
 [theme]
 # The preset Streamlit theme that your custom theme inherits from.
